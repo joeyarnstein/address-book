@@ -11,3 +11,12 @@ describe('Contact', function(){
     expect(testContact.fullName()).to.equal("Joey Arnstein");
   });
 });
+
+describe('Address', function(){
+  it("creates a new address with the given specifications", function(){
+    var newAddress = new Address("1601 Hill", "Santa Monica", "CA");
+    expect(newAddress.street).to.equal("1601 Hill");
+    expect(newAddress.city).to.equal("Santa Monica");
+    expect(newAddress.state).to.equal("CA");
+  });
+});
