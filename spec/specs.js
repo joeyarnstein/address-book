@@ -19,4 +19,9 @@ describe('Address', function(){
     expect(newAddress.city).to.equal("Santa Monica");
     expect(newAddress.state).to.equal("CA");
   });
+
+  it("will add the fullAddress method to all addresses", function(){
+    var newAddress = new Address("1601 Hill", "Santa Monica", "CA");
+    expect(newAddress.fullAddress()).to.equal("1601 Hill, Santa Monica, CA")
+  });
 });
